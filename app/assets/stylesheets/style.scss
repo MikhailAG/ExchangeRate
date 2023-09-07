@@ -1,0 +1,130 @@
+// Общие стили
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+  min-height: calc(100vh - 120px);
+}
+
+h2 {
+  margin: 0 0 20px;
+}
+
+
+// Стили шапки
+
+.header {
+  background-color: #333;
+  min-height: 80px;
+
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .navigation {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 10px;
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+}
+
+
+// Стили формы
+
+form {
+  margin-top: 20px;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  textarea {
+    resize: none;
+    height: 120px;
+  }
+
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      th {
+        text-align: left;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-bottom: 1px solid #ddd;
+        font-weight: 500;
+      }
+    }
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    td {
+      padding: 10px;
+    }
+  }
+}

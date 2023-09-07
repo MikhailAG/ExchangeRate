@@ -1,0 +1,62 @@
+// app/assets/stylesheets/reset.scss
+
+/* Обнуление верхнеуровневых HTML-элементов */
+html,
+body,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* Обнуление стилей списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Обнуление ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Обнуление стилей изображений */
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/* Обнуление таблиц */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Установка базового размера шрифта */
+html {
+  font-size: 16px;
+}
