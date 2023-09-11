@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Курсы валют</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<header>
+  <h1>Курсы валют</h1>
+  <nav>
+    <ul>
+      <li><%= link_to 'Главная', currencies_path %></li>
+      <li><%= link_to 'Добавить курс', new_currency_path %></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Таблица курсов валют</h2>
+
+  <table>
+    <thead>
+    <tr>
+      <th>Наименование валюты</th>
+      <th>Курс</th>
+      <th>Дата</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @currencies.each do |currency| %>
+      <tr>
+        <td><%= currency.name %></td>
+        <td><%= currency.value %></td>
+        <td><%= currency.date %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+<p><%= link_to "Добавить курс валюты", new_currency_path %></p>
+</body>
+</html>

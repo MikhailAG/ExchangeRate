@@ -39,15 +39,13 @@ gem "jbuilder"
 gem 'rest-client'
 gem 'delayed_job_active_record'
 gem 'exception_notification', :require => 'exception_notifier'
-gem 'activejob', '~> 7.0.7.2'
+gem 'activejob'
 gem 'sidekiq'
-gem 'bunny'
 gem 'sidekiq-scheduler'
 gem 'sass-rails'
-gem 'sinatra', require: false
 gem 'redis-namespace'
 gem 'json'
-gem 'whenever', '~> 1.0'
+gem 'whenever'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]

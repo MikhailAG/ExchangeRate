@@ -1,0 +1,45 @@
+// app/assets/stylesheets/header.scss
+
+/**
+ * Стили для шапки
+ */
+.header {
+  background-color: #333;
+  min-height: 80px;
+
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  .navigation {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+
+      li {
+        margin-right: 10px;
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #555;
+        }
+      }
+    }
+  }
+}

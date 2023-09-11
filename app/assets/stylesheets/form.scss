@@ -1,0 +1,38 @@
+// app/assets/stylesheets/form.scss
+
+/*
+ * Стили для форм
+ */
+form {
+  margin-top: 20px;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+  }
+
+  textarea {
+    resize: none;
+    height: 120px;
+  }
+
+  input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Добавление курса валюты</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'style', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <h1>Добавление курса валюты</h1>
+
+    <%= form_for @currency, remote: true, authenticity_token: true do |f| %>
+      <% if @currency.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@currency.errors.count, "ошибка") %> произошла при добавлении курса валюты:</h2>
+
+          <ul>
+            <% @currency.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :value %>
+        <%= f.number_field :value, step: '0.01', required: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :date %>
+        <%= f.date_field :date, required: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Добавить курс валюты" %>
+      </div>
+    <% end %>
+
+    <p><%= link_to "Вернуться к таблице курсов валют", currencies_path %></p>
+  </body>
+</html>

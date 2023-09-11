@@ -1,0 +1,8 @@
+/* Обнуление стилей и установка стилей по умолчанию */
+@import "reset";
+@import "default";
+
+/* Определение стилей глобальных компонентов */
+@import "header";
+@import "main";
+@import "form";

@@ -1,8 +1,5 @@
-class AddTimestampsToCurrencies < ActiveRecord::Migration[7.0]
+class AddTimestampsToCurrencies < ActiveRecord::Migration[6.0]
   def change
-    add_column :currencies, :created_at, :datetime
-    add_index :currencies, :created_at
-    add_column :currencies, :updated_at, :datetime
-    add_index :currencies, :updated_at
+    add_timestamps :currencies, null: true
   end
 end
